@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/products"
+public_folder: "/images/products"
+
+collections:
+  - name: "aka"
+    label: "阿卡珊瑚商品"
+    folder: "products/aka"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "商品名稱", name: "title", widget: "string"}
+      - {label: "分類", name: "category", widget: "select", options: ["精品首飾", "項鏈", "手串", "耳釘／戒子", "半成品"]}
+      - {label: "價格（元）", name: "price", widget: "number"}
+      - {label: "商品照片", name: "image", widget: "image"}
+      - {label: "商品簡介", name: "description", widget: "text", required: false}
+      - {label: "上架", name: "published", widget: "boolean", default: true}
+
+  - name: "momo"
+    label: "莫莫珊瑚商品"
+    folder: "products/momo"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "商品名稱", name: "title", widget: "string"}
+      - {label: "分類", name: "category", widget: "select", options: ["精品首飾", "雕件", "項鏈", "手串", "耳釘／戒子", "半成品"]}
+      - {label: "價格（元）", name: "price", widget: "number"}
+      - {label: "商品照片", name: "image", widget: "image"}
+      - {label: "商品簡介", name: "description", widget: "text", required: false}
+      - {label: "上架", name: "published", widget: "boolean", default: true}
+
+  - name: "sadin"
+    label: "沙丁珊瑚商品"
+    folder: "products/sadin"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "商品名稱", name: "title", widget: "string"}
+      - {label: "分類", name: "category", widget: "select", options: ["藝術品", "項鏈", "手串", "耳釘／戒子", "半成品"]}
+      - {label: "價格（元）", name: "price", widget: "number"}
+      - {label: "商品照片", name: "image", widget: "image"}
+      - {label: "商品簡介", name: "description", widget: "text", required: false}
+      - {label: "上架", name: "published", widget: "boolean", default: true}
